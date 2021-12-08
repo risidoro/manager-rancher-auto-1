@@ -14,7 +14,7 @@
 
         <locale>en_US</locale>
         <keytable>us.map.gz</keytable>
-        <timezone>US/Denver</timezone>
+        <timezone>America/Denver</timezone>
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
