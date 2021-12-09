@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="POS_Image_JeOS7">
+<image schemaversion="6.1" name="SLE15 SP3 Image">
     <description type="system">
         <author>Cameron Seader</author>
         <contact>cseader@suse.com</contact>
