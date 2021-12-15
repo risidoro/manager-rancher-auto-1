@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="POS_Image_SLE15_SP3">
+<image schemaversion="6.1" name="POS_Image_SLE15_SP2">
     <description type="system">
         <author>Cameron Seader</author>
         <contact>cseader@suse.com</contact>
-        <specification>SUSE Linux Enterprise 15 SP3 JeOS</specification>
+        <specification>SUSE Linux Enterprise 15 SP2 JeOS</specification>
     </description>
     <preferences>
         <version>7.0.0</version>
