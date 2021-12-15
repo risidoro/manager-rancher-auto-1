@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="SLE15-SP3">
+<image schemaversion="6.1" name="POS_Image_SLE15_SP3">
     <description type="system">
         <author>Cameron Seader</author>
         <contact>cseader@suse.com</contact>
@@ -18,7 +18,7 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type filesystem="ext3" image="pxe" initrd_system="dracut"></type>
+        <type filesystem="ext4" image="pxe" initrd_system="dracut"></type>
     </preferences>
 
     <packages type="image">
