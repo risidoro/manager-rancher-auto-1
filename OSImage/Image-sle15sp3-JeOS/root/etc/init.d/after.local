@@ -6,7 +6,6 @@ SALT_MINION_SERVICE="venv-salt-minion"
 SALT_MINION_DIR="/etc/venv-salt-minion"
 
 
-systemctl --now disable transactional-update.timer
 curl -skS https://$SM_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT --output /etc/pki/trust/anchors/RHN-ORG-TRUSTED-SSL-CERT
 update-ca-certificates
 
@@ -21,3 +20,4 @@ echo "    activation_key: $REGISTRATION_KEY" >> $SALT_MINION_CONF_DIR/susemanage
 mv $SALT_MINION_CONF_DIR/transactional_update.conf /root
 touch $SALT_MINION_CONF_DIR/transactional_update.conf
 systemctl enable --now $SALT_MINION_SERVICE
+chmod -x /etc/init.d/after.local
