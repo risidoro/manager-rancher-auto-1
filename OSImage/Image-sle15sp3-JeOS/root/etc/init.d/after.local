@@ -10,6 +10,7 @@ curl -skS https://$SM_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT --output /etc/pki/trus
 update-ca-certificates
 
 systemctl restart network
+hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname vmbuild1-$hostset
 hostname -f > $SALT_MINION_DIR/minion_id
 echo "master: $SM_SERVER" > $SALT_MINION_CONF_DIR/susemanager.conf
 echo "server_id_use_src: adler42" >> $SALT_MINION_CONF_DIR/susemanager.conf
