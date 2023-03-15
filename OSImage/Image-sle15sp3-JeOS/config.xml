@@ -19,9 +19,8 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
 	<type filesystem="xfs" image="oem" format="qcow2" initrd_system="dracut">
-	<!-- Size specification  <size unit="G" additive="false" >20</size -->	
+	<size unit="G" additive="false" >30</size	
           <oemconfig>
-            <oem-systemsize>20048</oem-systemsize>
 	    <oem-resize>true</oem-resize>
           </oemconfig>
 	</type>
