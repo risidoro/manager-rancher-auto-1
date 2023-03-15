@@ -1,14 +1,16 @@
 #!/bin/bash
 SM_SERVER=suma42test.site.com
-REGISTRATION_KEY=1-15sp3
+REGISTRATION_KEY=1-15sp4
 SALT_MINION_CONF_DIR="/etc/venv-salt-minion/minion.d"
 SALT_MINION_SERVICE="venv-salt-minion"
 SALT_MINION_DIR="/etc/venv-salt-minion"
+HOSTNAME_LOCAL=vmbuild1
 
 
 curl -skS https://$SM_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT --output /etc/pki/trust/anchors/RHN-ORG-TRUSTED-SSL-CERT
 update-ca-certificates
 
+hostnamectl set-hostname $HOSTNAME_LOCAL 
 hostname -f > $SALT_MINION_DIR/minion_id
 echo "master: $SM_SERVER" > $SALT_MINION_CONF_DIR/susemanager.conf
 echo "server_id_use_src: adler42" >> $SALT_MINION_CONF_DIR/susemanager.conf
