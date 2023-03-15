@@ -9,9 +9,7 @@ SALT_MINION_DIR="/etc/venv-salt-minion"
 curl -skS https://$SM_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT --output /etc/pki/trust/anchors/RHN-ORG-TRUSTED-SSL-CERT
 update-ca-certificates
 
-systemctl restart network
-hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname vmbuild1-$hostset
-hostname -f > $SALT_MINION_DIR/minion_id
+hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname vmbuild1-$hostset 
 echo "master: $SM_SERVER" > $SALT_MINION_CONF_DIR/susemanager.conf
 echo "server_id_use_src: adler42" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "enable_legacy_startup_events: False" >> $SALT_MINION_CONF_DIR/susemanager.conf
