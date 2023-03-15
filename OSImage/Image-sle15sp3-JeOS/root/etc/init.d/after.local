@@ -18,7 +18,5 @@ echo "enable_fqdns_grains: False" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "grains:" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "  susemanager:" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "    activation_key: $REGISTRATION_KEY" >> $SALT_MINION_CONF_DIR/susemanager.conf
-mv $SALT_MINION_CONF_DIR/transactional_update.conf /root
-touch $SALT_MINION_CONF_DIR/transactional_update.conf
 systemctl enable --now $SALT_MINION_SERVICE
 chmod -x /etc/init.d/after.local
