@@ -92,7 +92,7 @@ USERCONTROL='no'
 EOF
 
 # set hostname
-hostset=`cat /etc/machine_id | tail -c 5` && hostnamectl set-hostname vmbuild1-$hostset
+hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname vmbuild1-$hostset
 
 #======================================
 # Enable sshd
