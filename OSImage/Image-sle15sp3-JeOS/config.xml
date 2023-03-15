@@ -2,24 +2,24 @@
 
 <image schemaversion="6.1" name="sle15-sp3">
     <description type="system">
-        <author>Cameron Seader</author>
-        <contact>cseader@suse.com</contact>
+        <author>Don Vosburg</author>
+        <contact>dvosburg@suse.com</contact>
         <specification>SUSE Linux Enterprise 15 SP3 JeOS</specification>
     </description>
     <preferences>
-        <version>7.0.0</version>
+        <version>7.3.0</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
 
         <locale>en_US</locale>
         <keytable>us.map.gz</keytable>
-        <timezone>America/Denver</timezone>
+        <timezone>America/Detroit</timezone>
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-	<type filesystem="ext4" image="oem" format="qcow2" initrd_system="dracut">
-	  <size unit="G" additive="false" >60</size>	
+	<type filesystem="xfs" image="oem" format="qcow2" initrd_system="dracut">
+	  <size unit="G" additive="false" >20</size>	
           <oemconfig>
 	    <oem-resize>true</oem-resize>
           </oemconfig>
@@ -33,7 +33,7 @@
             home="/home/guest" name="guest" groups="users"
         />
         <user
-            password="$1$xyz$YACkVSgLQHtAXVTV.wIyR/"
+            password="$1$xyz$..z0J0HuUZ73rVznp2H.s/"
             home="/root" name="root" groups="root"
         />
       </users>
