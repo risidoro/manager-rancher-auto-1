@@ -35,4 +35,5 @@ systemctl enable $SALT_MINION_SERVICE
 systemctl stop $SALT_MINION_SERVICE
 rm $SALT_MINION_CONF_DIR/minion_id
 systemctl start $SALT_MINION_SERVICE
+touch /tmp/completed-after-local
 chmod -x /etc/init.d/after.local
