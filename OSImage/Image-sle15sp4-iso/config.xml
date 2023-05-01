@@ -46,11 +46,7 @@ History
 
         <rpm-excludedocs>true</rpm-excludedocs>
 	 <type image="iso" primary="true" flags="overlay" hybridpersistent_filesystem="xfs" hybridpersistent="true"/>
-	        <oemconfig>
-	    <oem-resize>true</oem-resize>
-          </oemconfig>
-	</type>
-    </preferences>
+     </preferences>
 
       <!-- Add root and guest users -->
       <users>
