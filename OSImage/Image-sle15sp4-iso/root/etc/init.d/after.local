@@ -31,5 +31,8 @@ echo "enable_fqdns_grains: False" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "grains:" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "  susemanager:" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "    activation_key: $REGISTRATION_KEY" >> $SALT_MINION_CONF_DIR/susemanager.conf
-systemctl enable --now $SALT_MINION_SERVICE
+systemctl enable $SALT_MINION_SERVICE
+systemctl stop $SALT_MINION_SERVICE
+rm $SALT_MINION_CONF_DIR/minion_id
+systemctl start $SALT_MINION_SERVICE
 chmod -x /etc/init.d/after.local
