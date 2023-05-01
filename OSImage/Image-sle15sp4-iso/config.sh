@@ -44,16 +44,6 @@ echo ** "reset machine settings"
 
 # FIXME: 
 #sed -i 's/^root:[^:]*:/root:*:/' /etc/shadow
-rm -f /etc/machine-id \
-      /var/lib/zypp/AnonymousUniqueId \
-      /var/lib/systemd/random-seed \
-      /var/lib/dbus/machine-id
-
-#======================================
-# Add machine-id
-#======================================
-dbus-uuidgen --ensure
-systemd-machine-id-setup
 
 #======================================
 # SuSEconfig
