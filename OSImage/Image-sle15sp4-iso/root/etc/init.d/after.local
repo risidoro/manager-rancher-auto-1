@@ -23,6 +23,7 @@ dbus-uuidgen --ensure
 systemd-machine-id-setup
 
 
+rm $SALT_MINION_CONF_DIR/minion_id
 hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname $HOSTNAME_PREFIX-$hostset && cat $HOSTNAME_PREFIX-$hostset > $SALT_MINION_CONF_DIR/minion_id
 echo "master: $SM_SERVER" > $SALT_MINION_CONF_DIR/susemanager.conf
 echo "server_id_use_src: adler42" >> $SALT_MINION_CONF_DIR/susemanager.conf
@@ -33,7 +34,6 @@ echo "  susemanager:" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "    activation_key: $REGISTRATION_KEY" >> $SALT_MINION_CONF_DIR/susemanager.conf
 systemctl enable $SALT_MINION_SERVICE
 systemctl stop $SALT_MINION_SERVICE
-rm $SALT_MINION_CONF_DIR/minion_id
 systemctl start $SALT_MINION_SERVICE
 touch /tmp/completed-after-local
 chmod -x /etc/init.d/after.local
