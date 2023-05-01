@@ -18,8 +18,18 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-	 <type image="iso" primary="true" flags="overlay" hybridpersistent_filesystem="xfs" hybridpersistent="true"/>
-     </preferences>
+	    <type image="oem" filesystem="xfs" kernelcmdline="console=ttyS0" firmware="uefi" installiso="true" bootpartition="false" installboot="install">
+            <bootloader name="grub2" console="serial" timeout="10"/>
+            <oemconfig>
+                <oem-unattended>true</oem-unattended>
+                <oem-swapsize>1024</oem-swapsize>
+                <oem-multipath-scan>false</oem-multipath-scan>
+            </oemconfig>
+            <systemdisk>
+                <volume name="home"/>
+            </systemdisk>
+        </type>
+    </preferences>
 
       <!-- Add root and guest users -->
       <users>
