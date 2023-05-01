@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="7.5" name="sle15-sp4-dpv">
+<image schemaversion="7.5" name="sle15-sp4-iso-dpv">
     <description type="system">
         <author>Don Vosburg</author>
         <contact>dvosburg@suse.com</contact>
-        <specification>SUSE Linux Enterprise 15 SP4 JeOS</specification>
+        <specification>SUSE Linux Enterprise 15 SP4 ISO</specification>
     </description>
     <preferences>
         <version>7.4.5</version>
