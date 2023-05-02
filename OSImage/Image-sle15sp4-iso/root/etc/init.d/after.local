@@ -24,7 +24,8 @@ systemd-machine-id-setup
 
 
 rm $SALT_MINION_CONF_DIR/minion_id
-hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname $HOSTNAME_PREFIX-$hostset && cat $HOSTNAME_PREFIX-$hostset > $SALT_MINION_CONF_DIR/minion_id
+hostset=`cat /etc/machine-id | tail -c 6` && hostnamectl set-hostname $HOSTNAME_PREFIX-$hostset
+hostname > $SALT_MINION_CONF_DIR/minion_id
 echo "master: $SM_SERVER" > $SALT_MINION_CONF_DIR/susemanager.conf
 echo "server_id_use_src: adler42" >> $SALT_MINION_CONF_DIR/susemanager.conf
 echo "enable_legacy_startup_events: False" >> $SALT_MINION_CONF_DIR/susemanager.conf
