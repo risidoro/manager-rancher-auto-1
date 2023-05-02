@@ -75,6 +75,7 @@
 	<package name="rsync"/>
 	<package name="dracut-kiwi-oem-repart"/>
 	<package name="dracut-kiwi-oem-dump"/>
+	<package name="hostname"/> <!-- used for setting minion_id -->
 	
         <!-- K3s requirements -->
 	<package name="which"/>
