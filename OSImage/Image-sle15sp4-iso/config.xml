@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="7.5" name="sle15-sp4-iso-proxy">
+<image schemaversion="7.5" name="sle15-sp4-iso">
     <description type="system">
         <author>Roberto Isidoro</author>
         <contact>roberto.isidoro@suse.com</contact>
