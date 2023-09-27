@@ -1,6 +1,6 @@
 #!/bin/bash
-SM_SERVER=proxyall.susedemo.com
-#SM_SERVER=psuma.geeko.land
+#SM_SERVER=proxyall.susedemo.com
+SM_SERVER=psuma.geeko.land
 REGISTRATION_KEY=9-sles15sp4
 SALT_MINION_CONF_DIR="/etc/venv-salt-minion/minion.d"
 SALT_MINION_SERVICE="venv-salt-minion"
