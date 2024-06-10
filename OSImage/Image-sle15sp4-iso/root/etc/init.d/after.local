@@ -1,7 +1,7 @@
 #!/bin/bash
 #SM_SERVER=proxyall.susedemo.com
 SM_SERVER=slx00019901.eroski.es
-REGISTRATION_KEY=9-sles15sp4
+REGISTRATION_KEY=1-sles15sp4
 SALT_MINION_CONF_DIR="/etc/venv-salt-minion/minion.d"
 SALT_MINION_SERVICE="venv-salt-minion"
 SALT_MINION_DIR="/etc/venv-salt-minion"
