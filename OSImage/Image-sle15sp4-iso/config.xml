@@ -122,6 +122,40 @@
         <package name="bind-utils"/>
         <package name="kiwi-tools"/>
         <package name="dosfstools"/>
+	<!-- packages specific for Graphical image -->
+        <package name="patterns-gnome-gnome_basic"/>
+        <package name="patterns-base-x11"/>
+        <package name="xorg-x11-server"/>
+        <package name="xorg-x11"/>
+        <package name="xorg-x11-libs"/>
+        <package name="xorg-x11-driver-video"/>
+        <package name="dbus-1-x11"/>
+        <package name="x11-tools"/>
+        <package name="xorg-x11-fonts"/>
+        <package name="gdm"/>
+        <package name="alsa"/>
+        <package name="pulseaudio"/>
+        <package name="MozillaFirefox"/>
+        <package name="nautilus"/>
+
+        <!-- Themes and branding -->
+        <package name="gnome-icon-theme"/>
+        <package name="gnome-menus-branding-SLE"/>
+        <package name="gtk2-metatheme-adwaita"/>
+        <package name="gtk3-metatheme-adwaita"/>
+        <package name="gdm-branding-SLE"/>
+        <package name="branding-SLE"/>
+        <package name="gio-branding-SLE"/>
+        <package name="MozillaFirefox-branding-SLE"/>
+        <package name="gnome-shell-classic"/>
+
+        <!-- Fonts -->
+        <package name="liberation-fonts"/>
+        <package name="google-opensans-fonts"/>
+        <package name="cantarell-fonts"/>
+        <package name="dejavu-fonts"/>
+        <package name="ghostscript-fonts-std"/>
+        <package name="ghostscript-fonts-other"/>
     </packages>
     <packages type="bootstrap">
         <package name="udev"/>
